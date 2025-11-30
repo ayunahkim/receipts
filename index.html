@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Receipts</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="titlestuff">
+        <h1 id="titletext">the internet is forever (?)</h1>
+        <span id="tooltiptext">if you archive it</span>
+    </div>
+
+     <!-- Draggable DIV -->
+    <div id="draggable">
+        <!-- normally i would not do the id like this but i have too many other things to do first -->
+        <img id="draggable1" class="receipt" src="assets/nanotwt.png" onmousedown="dragElement(this)">
+        <img id="draggable2" class="receipt" src="assets/nanodoc.png" onmousedown="dragElement(this)">
+        <img id="draggable3" class="receipt" src="assets/baotwt.png" onmousedown="dragElement(this)">
+        <img id="draggable4" class="receipt" src="assets/baodoc.png" onmousedown="dragElement(this)">
+        <img id="draggable5" class="receipt" src="assets/sindertwt.png" onmousedown="dragElement(this)">
+        <img id="draggable6" class="receipt" src="assets/sinderdoc.png" onmousedown="dragElement(this)">
+        <img id="draggable7" class="receipt" src="assets/sinder1000doc.png" onmousedown="dragElement(this)">
+    </div> 
+
+    <div id="receiptbox">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
