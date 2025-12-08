@@ -10,22 +10,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- layer 1: instructions/guide -->
+     <div id="popuptutorial">
+        <img id="popupimg" src="assets/tutorial.png">
+        <p>click anywhere to continue</p>
+     </div>
+
+     <button id="questionbttn" onclick="showPopup()">?</button>
+
+    <!-- main page -->
     <div id="titlestuff">
         <h1 id="titletext">the internet is forever (?)</h1>
         <span id="tooltiptext">if you archive it</span>
     </div>
 
+    
+
      <!-- Draggable DIV -->
     <div id="draggable">
         <!-- normally i would not do the id like this but i have too many other things to do first -->
-        <img id="draggable1" class="receipt" src="assets/nanotwt.png" onmousedown="dragElement(this)">
-        <img id="draggable2" class="receipt" src="assets/nanodoc.png" onmousedown="dragElement(this)">
-        <img id="draggable3" class="receipt" src="assets/baotwt.png" onmousedown="dragElement(this)">
-        <img id="draggable4" class="receipt" src="assets/baodoc.png" onmousedown="dragElement(this)">
-        <img id="draggable5" class="receipt" src="assets/sindertwt.png" onmousedown="dragElement(this)">
-        <img id="draggable6" class="receipt" src="assets/sinderdoc.png" onmousedown="dragElement(this)">
-        <img id="draggable7" class="receipt" src="assets/sinder1000doc.png" onmousedown="dragElement(this)">
+        <img id="nanotwt" class="receipt" src="assets/nanotwt.png" onmousedown="changeZIndex(this)">
+        <img id="nanodoc" class="receipt" src="assets/nanodoc.png" onmousedown="changeZIndex(this)">
+        <img id="baotwt" class="receipt" src="assets/baotwt.png" onmousedown="changeZIndex(this)">
+        <img id="baodoc" class="receipt" src="assets/baodoc.png" onmousedown="changeZIndex(this)">
+        <img id="sindertwt" class="receipt" src="assets/sindertwt.png" onmousedown="changeZIndex(this)">
+        <img id="sinderdoc" class="receipt" src="assets/sinderdoc.png" onmousedown="changeZIndex(this)">
+        <img id="sinder1000pg" class="receipt" src="assets/sinder1000pg.png" onmousedown="changeZIndex(this)">
     </div> 
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="nanotwt">
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
 
     <div id="receiptbox">
     </div>

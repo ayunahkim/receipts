@@ -1,3 +1,25 @@
+let popup = document.getElementById('popuptutorial');
+let questionbttn = document.getElementById('questionbttn');
+
+popup.addEventListener('click',()=>{
+  popup.style.visibility = "hidden";
+})
+
+function showPopup(){
+  popup.style.visibility = "visible";
+}
+
+let receipts = document.getElementsByClassName('receipt');
+
+function changeZIndex(elmnt){
+  let elemnt = Number(elmnt.style.zIndex);
+  elemnt +=2;
+  elmnt.style.zIndex = elemnt;
+  console.log(elmnt.style.zIndex);
+
+  dragElement(elmnt);
+}
+
 function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 
@@ -6,6 +28,7 @@ function dragElement(elmnt) {
 
 
   function dragMouseDown(e) {
+    changeZIndex(selected);
     e = e || window.event;
     e.preventDefault();
     // get the mouse cursor position at startup:

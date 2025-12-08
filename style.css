@@ -1,6 +1,7 @@
 body {
     background-color: #1D1C1C;
     padding:1.5em;
+    overflow:hidden;
 }
 
 h1 {
@@ -23,7 +24,54 @@ h1:hover {
 }
 
 img {
-    border: 1px rgb(195, 176, 176) solid;
+    user-select: none;
+}
+
+#questionbttn {
+    border:none;
+    background-color:transparent;
+    color:white;
+    font-family:"DM Mono";
+    font-size:large;
+    position:absolute;
+    right:3em;
+    top:3em;
+    border-radius:25px;
+}
+
+#questionbttn:hover {
+    color:pink;
+    -moz-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+#popuptutorial {
+    visibility:visible;
+    display:block;
+    z-index:10;
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    margin:auto;
+    background-color:#1d1c1cec;
+    color:white;
+}
+
+#popuptutorial p{
+    font-family:"DM Mono";
+    font-weight:300;
+    font-size:small;
+    text-align:center;
+    margin-top:20px;
+}
+
+#popupimg {
+    width:50%;
+    margin:auto;
+    margin-top:4%;
+    display:flex;
 }
 
 #titlestuff:hover #tooltiptext {
@@ -43,9 +91,17 @@ img {
     top:-3vh;
 }
 
+.modal {
+    display:none;
+    position:fixed;
+    z-index:20;
+    padding-top:100px;
+}
+
 .receipt {
     position: absolute;
     max-height:70vh;
+    border: 1px rgb(195, 176, 176) solid;
 }
 
 .instrument-serif-regular {
@@ -74,55 +130,55 @@ img {
 
 #draggable {
   position: absolute;
-  z-index: 9;
+  z-index: 0;
   width:100%;
 }
 
-#draggable1 {
+#nanotwt {
     position: absolute;
     left:0px;
     top:30px;
     max-height:70vh;
-    z-index: 15;
+    z-index:1;
 }
 
-#draggable2 {
+#nanodoc {
     position: absolute;
-    z-index:9;
+    z-index:1;
     left:16%;
     top:40px;
 }
 
-#draggable3 {
+#baotwt {
     position:absolute;
     left:25%;
-    z-index:9;
+    z-index:1;
     top:0px;
 }
 
-#draggable4 {
+#baodoc {
     position:absolute;
     left:56%;
     top:50px;
-    z-index:12;
+    z-index:1;
 }
 
-#draggable5 {
+#sindertwt {
     position:absolute;
     left:40%;
     top:70px;
-    z-index:10;
+    z-index:1;
 }
 
-#draggable6 {
+#sinderdoc {
     position:absolute;
     left:70%;
-    z-index:9;
+    z-index:1;
 }
 
-#draggable7 {
+#sinder1000pg {
     position: absolute;
-    z-index:8;
+    z-index:1;
     left:80%;
     top:20px;
 }
