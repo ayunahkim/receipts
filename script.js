@@ -21,12 +21,7 @@ function dragElement(elmnt) {
   selectedZIndex += i;
   selected.style.zIndex = selectedZIndex;
 
-  selected.onclick = test;
   selected.onmousedown = dragMouseDown;
-
-  function test(){
-    console.log("clicked")
-  }
 
   function dragMouseDown(e) {
     console.log("im dragged")
